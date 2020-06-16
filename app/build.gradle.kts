@@ -4,20 +4,20 @@
 
 plugins {
     id("com.android.application")
-    id("kotlin-android")
-    id("kotlin-android-extensions")
+    kotlin("android")
+    kotlin("android.extensions")
 }
 
 android {
-    compileSdkVersion (29)
-    buildToolsVersion ("30.0.0")
+    compileSdkVersion (Config.Android.compileSdkVersion)
+    buildToolsVersion (Config.Android.buildToolsVersion)
 
     defaultConfig {
-        applicationId = "top.ss007.gradlewithkotlindsl"
-        minSdkVersion (21)
-        targetSdkVersion (29)
-        versionCode= 1
-        versionName= "1.0"
+        applicationId = Config.Android.applicationId
+        minSdkVersion (Config.Android.minSdkVersion)
+        targetSdkVersion (Config.Android.targetSdkVersion)
+        versionCode= Config.Android.versionCode
+        versionName= Config.Android.versionName
 
         testInstrumentationRunner="androidx.test.runner.AndroidJUnitRunner"
     }
